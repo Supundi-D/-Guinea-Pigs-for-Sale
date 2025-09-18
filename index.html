@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guinea Pigs for Sale</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background: #ff9966;
+      color: white;
+      padding: 1.5rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #e67e22;
+      margin-top: 5px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🐹 Guinea Pigs for Sale</h1>
+    <p>Adorable, healthy, and friendly guinea pigs available</p>
+  </header>
+
+  <section class="container">
+    <div class="card">
+      <img src="https://placekitten.com/300/200" alt="Guinea Pig 1">
+      <div class="card-content">
+        <h3>American Guinea Pig</h3>
+        <p>Friendly and easy to handle.</p>
+        <p class="price">LKR 2500 - LKR 4000</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://placekitten.com/301/200" alt="Guinea Pig 2">
+      <div class="card-content">
+        <h3>Abyssinian Guinea Pig</h3>
+        <p>Playful with unique fur patterns.</p>
+        <p class="price">LKR 3500 - LKR 7000</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://placekitten.com/302/200" alt="Guinea Pig 3">
+      <div class="card-content">
+        <h3>Peruvian Guinea Pig</h3>
+        <p>Long-haired and beautiful coat.</p>
+        <p class="price">LKR 4000 - LKR 8000</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>📞 Contact us at: +94 71 8967 553 |</p>
+  </footer>
+
+</body>
+</html>
