@@ -76,19 +76,25 @@
       margin: 5px 0;
     }
 
-    /* Back to Top Button */
-    #backToTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #e67e22;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      display: none;
-      font-size: 14px;
+    /* Sections */
+    .about-section,
+    .delivery-section {
+      padding: 30px 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .about-section {
+      background: #fff3e6;
+      color: #444;
+    }
+
+    .delivery-section {
+      background: #e6f7ff;
+      color: #444;
     }
 
     /* Dark Mode */
@@ -108,6 +114,32 @@
 
     .dark-mode footer {
       background: #111;
+    }
+
+    .dark-mode .about-section,
+    .dark-mode .delivery-section {
+      background: #333;
+      color: #f1f1f1;
+    }
+
+    .dark-mode .about-section a,
+    .dark-mode .delivery-section a {
+      color: #e67e22;
+    }
+
+    /* Buttons */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #e67e22;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+      font-size: 14px;
     }
 
     #darkModeToggle {
@@ -133,10 +165,9 @@
   </header>
 
   <!-- About Section -->
-  <section
-    style="background:#fff3e6; padding: 30px 20px; margin: 20px auto; max-width: 900px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <section class="about-section">
     <h2 style="color:#e67e22; margin-bottom:15px;">About Guinea Pigs 🐹</h2>
-    <p style="font-size: 1rem; line-height: 1.6; color:#444;">
+    <p>
       Guinea pigs are gentle, social, and playful small pets that love to live in pairs or groups.
       They enjoy eating fresh vegetables, hay, and pellets, which are essential for their health.
       With their curious nature, guinea pigs are very active and playful, making them great companions for families.
@@ -144,11 +175,21 @@
     </p>
     <p style="margin-top:15px;">
       📖 Learn more about guinea pigs on
-      <a href="https://en.wikipedia.org/wiki/Guinea_pig" target="_blank" id="wikiLink"
-        style="color:#e67e22; font-weight:bold; text-decoration:none;">
+      <a href="https://en.wikipedia.org/wiki/Guinea_pig" target="_blank" id="wikiLink">
         Wikipedia
       </a>
     </p>
+  </section>
+
+  <!-- Delivery Section -->
+  <section class="delivery-section">
+    <h2 style="color:#1e90ff; margin-bottom:15px;">Delivery Options 🚚</h2>
+    <ul style="text-align:left; max-width:600px; margin:auto;">
+      <li>🏠 Home Delivery: Available within Colombo and suburbs.</li>
+      <li>💰 Delivery Charges: LKR 500 for local delivery (free for orders above LKR 7000).</li>
+      <li>📅 Delivery Time: 1-3 days depending on location and availability.</li>
+      <li>📝 Order Process: Call or WhatsApp to place your order and choose delivery time.</li>
+    </ul>
   </section>
 
   <!-- Guinea Pig Cards -->
@@ -161,7 +202,6 @@
         <p class="price">LKR 2500 - LKR 4000</p>
       </div>
     </div>
-
     <div class="card">
       <img src="Guinea2.jpeg" alt="Abyssinian Guinea Pig">
       <div class="card-content">
@@ -170,7 +210,6 @@
         <p class="price">LKR 3500 - LKR 7000</p>
       </div>
     </div>
-
     <div class="card">
       <img src="Guinea3.jpeg" alt="Peruvian Guinea Pig">
       <div class="card-content">
@@ -179,7 +218,6 @@
         <p class="price">LKR 4000 - LKR 8000</p>
       </div>
     </div>
-
     <div class="card">
       <img src="Guinea4.jpeg" alt="Teddy Guinea Pig">
       <div class="card-content">
@@ -188,7 +226,6 @@
         <p class="price">LKR 3000 - LKR 5000</p>
       </div>
     </div>
-
     <div class="card">
       <img src="Guinea5.jpeg" alt="Silkie Guinea Pig">
       <div class="card-content">
@@ -197,7 +234,6 @@
         <p class="price">LKR 4500 - LKR 9000</p>
       </div>
     </div>
-
     <div class="card">
       <img src="Guinea6.jpeg" alt="Texel Guinea Pig">
       <div class="card-content">
@@ -206,7 +242,6 @@
         <p class="price">LKR 5000 - LKR 9500</p>
       </div>
     </div>
-
     <div class="card">
       <img src="Guinea7.jpeg" alt="Crested Guinea Pig">
       <div class="card-content">
@@ -215,7 +250,6 @@
         <p class="price">LKR 2800 - LKR 4800</p>
       </div>
     </div>
-
     <div class="card">
       <img src="Guinea8.jpeg" alt="Coronet Guinea Pig">
       <div class="card-content">
@@ -225,22 +259,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Delivery Section -->
-  <section
-    style="background:#e6f7ff; padding: 30px 20px; margin: 20px auto; max-width: 900px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <h2 style="color:#1e90ff; margin-bottom:15px;">Delivery Options 🚚</h2>
-    <p style="font-size: 1rem; line-height: 1.6; color:#444;">
-      We offer convenient delivery options for your new furry friend!
-    <ul style="text-align:left; max-width:600px; margin:auto;">
-      <li>🏠 Home Delivery: Available within Colombo and suburbs.</li>
-      <li>💰 Delivery Charges: LKR 500 for local delivery (free for orders above LKR 7000).</li>
-      <li>📅 Delivery Time: 1-3 days depending on location and availability.</li>
-      <li>📝 Order Process: Call or WhatsApp to place your order and choose delivery time.</li>
-    </ul>
-    </p>
-  </section>
-
 
   <!-- Footer -->
   <footer>
@@ -256,7 +274,7 @@
 
   <!-- JavaScript -->
   <script>
-    // Show today's date in footer
+    // Show today's date
     const dateElement = document.getElementById("date");
     const today = new Date();
     dateElement.textContent = "📅 Today: " + today.toDateString();
@@ -290,5 +308,4 @@
   </script>
 
 </body>
-
 </html>
