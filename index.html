@@ -12,6 +12,7 @@
       background: #f9f9f9;
       color: #333;
       text-align: center;
+      transition: background 0.3s, color 0.3s;
     }
 
     header {
@@ -74,6 +75,53 @@
     footer p {
       margin: 5px 0;
     }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #e67e22;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+      font-size: 14px;
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+      background: #222;
+      color: #f1f1f1;
+    }
+
+    .dark-mode header {
+      background: #444;
+    }
+
+    .dark-mode .card {
+      background: #333;
+      color: #f1f1f1;
+    }
+
+    .dark-mode footer {
+      background: #111;
+    }
+
+    #darkModeToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #444;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
   </style>
 </head>
 
@@ -83,7 +131,6 @@
     <h1>🐹 Guinea Pigs for Sale</h1>
     <p>Adorable, healthy, and friendly guinea pigs available in Sri Lanka</p>
   </header>
-
 
   <!-- About Section -->
   <section
@@ -97,14 +144,14 @@
     </p>
     <p style="margin-top:15px;">
       📖 Learn more about guinea pigs on
-      <a href="https://en.wikipedia.org/wiki/Guinea_pig" target="_blank"
+      <a href="https://en.wikipedia.org/wiki/Guinea_pig" target="_blank" id="wikiLink"
         style="color:#e67e22; font-weight:bold; text-decoration:none;">
         Wikipedia
       </a>
     </p>
   </section>
 
-
+  <!-- Guinea Pig Cards -->
   <section class="container">
     <div class="card">
       <img src="Guinea1.jpeg" alt="American Guinea Pig">
@@ -179,25 +226,27 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>📞 Contact us at: +94 71 8967 553</p>
     <p>📧 Email: info@guineapigsales.lk</p>
+    <p id="date"></p>
     <p>© 2025 Guinea Pigs for Sale | Created & Developed by <strong>Supundi-D</strong></p>
   </footer>
 
-  <!-- Back to Top Button -->
+  <!-- Buttons -->
   <button id="backToTop">⬆ Back to Top</button>
+  <button id="darkModeToggle">🌙 Dark Mode</button>
 
   <!-- JavaScript -->
   <script>
-    // 1. Show today's date in footer
+    // Show today's date in footer
     const dateElement = document.getElementById("date");
     const today = new Date();
     dateElement.textContent = "📅 Today: " + today.toDateString();
 
-    // 2. Back to Top Button
+    // Back to Top Button
     const backToTopBtn = document.getElementById("backToTop");
-
     window.onscroll = function () {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         backToTopBtn.style.display = "block";
@@ -205,18 +254,24 @@
         backToTopBtn.style.display = "none";
       }
     };
-
     backToTopBtn.onclick = function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    // 3. Alert before opening Wikipedia
+    // Alert before opening Wikipedia
     const wikiLink = document.getElementById("wikiLink");
-    wikiLink.addEventListener("click", function (event) {
+    wikiLink.addEventListener("click", function () {
       alert("You are about to visit Wikipedia for more details about guinea pigs!");
     });
-  </script>
 
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    darkModeToggle.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+      darkModeToggle.textContent =
+        document.body.classList.contains("dark-mode") ? "☀ Light Mode" : "🌙 Dark Mode";
+    });
+  </script>
 
 </body>
 
