@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  header {
+    background: #ff9966;
+    color: white;
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-top: 5px;
+  }
+
+  footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+
+  /* Sections */
+  .about-section,
+  .delivery-section {
+    padding: 30px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .about-section {
+    background: #fff3e6;
+    color: #444;
+  }
+
+  .delivery-section {
+    background: #e6f7ff;
+    color: #444;
+  }
+
+  /* Dark Mode */
+  .dark-mode {
+    background: #222;
+    color: #f1f1f1;
+  }
+
+  .dark-mode header {
+    background: #444;
+  }
+
+  .dark-mode .card {
+    background: #333;
+    color: #f1f1f1;
+  }
+
+  .dark-mode footer {
+    background: #111;
+  }
+
+  .dark-mode .about-section,
+  .dark-mode .delivery-section {
+    background: #333;
+    color: #f1f1f1;
+  }
+
+  .dark-mode .about-section a,
+  .dark-mode .delivery-section a {
+    color: #e67e22;
+  }
+
+  /* Buttons */
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+  }
+
+  #darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
